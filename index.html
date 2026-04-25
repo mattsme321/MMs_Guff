@@ -101,7 +101,7 @@ const DEFAULT_TASK_GROUPS = [
   { id:"night", label:"🌙 Night (18:30–21:30)", tasks:["Eat by 19:00","Plan tomorrow's tasks","Deep Sleep log: % REM / % Total","Steps; km; HR","Dim lights & screens by 21:00","Read","Grace & Prayer","4-7-8 Breathing","Lights out by 21:30"] },
 ];
 
-const todayStr = () => new Date().toISOString().split("T")[0];
+const todayStr = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; };
 const formatDate = iso => { const [y,m,d]=iso.split("-"); return new Date(y,m-1,d).toLocaleDateString("en-US",{weekday:"long",year:"numeric",month:"long",day:"numeric"}); };
 const makeTaskObj = label => ({ label, done:false, note:"", subItems:[] });
 const initGroups = groups => groups.map(g => ({...g, tasks:g.tasks.map(makeTaskObj)}));
