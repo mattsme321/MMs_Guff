@@ -10,67 +10,40 @@
     button { font-family: Georgia, serif; cursor: pointer; }
     input, textarea { font-family: Georgia, serif; }
     textarea { resize: vertical; }
-
     #app { min-height: 100vh; }
-
-    /* Loading / Error screens */
     .center-screen { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 32px; text-align: center; }
-    .center-screen .icon { font-size: 28px; }
-    .center-screen .msg { font-size: 14px; color: #8a7560; letter-spacing: 2px; text-transform: uppercase; }
-    .center-screen .sub { font-size: 13px; color: #8a7560; max-width: 340px; line-height: 1.6; }
     .progress-bar-wrap { width: 200px; height: 3px; background: #e0d8c8; border-radius: 99px; overflow: hidden; }
     .progress-bar-inner { height: 100%; width: 40%; background: #c9a84c; border-radius: 99px; animation: slide 1.5s ease-in-out infinite; }
     @keyframes slide { 0%{transform:translateX(-100%)} 100%{transform:translateX(600%)} }
-
-    /* Header */
     header { background: #2c2416; color: #c9a84c; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; border-bottom: 2px solid #c9a84c; }
     header .brand { font-size: 16px; font-weight: bold; letter-spacing: 1px; }
     header .sync { font-size: 10px; margin-top: 2px; letter-spacing: 1px; }
     header nav { display: flex; gap: 6px; }
     header nav button { border: 1px solid #c9a84c; border-radius: 4px; padding: 4px 11px; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; background: transparent; color: #c9a84c; }
     header nav button.active { background: #c9a84c; color: #2c2416; }
-
-    /* Toast */
     #toast { position: fixed; top: 20px; right: 20px; background: #2c2416; color: #c9a84c; padding: 10px 20px; border-radius: 6px; font-size: 13px; z-index: 999; border: 1px solid #c9a84c; display: none; }
-
-    /* Main content */
     main { max-width: 760px; margin: 0 auto; padding: 24px 16px; }
-
-    /* Cards */
     .card { background: #fff; border-radius: 8px; border: 1px solid #e0d8c8; margin-bottom: 12px; overflow: hidden; }
     .card-body { padding: 14px 18px; }
     .card-header-dark { background: #2c2416; color: #c9a84c; padding: 9px 14px; display: flex; align-items: center; justify-content: space-between; }
-
-    /* Banner */
     .banner { background: #2c2416; color: #c9a84c; border-radius: 8px; padding: 10px 18px; margin-bottom: 18px; font-size: 12px; letter-spacing: 1.5px; text-align: center; font-style: italic; border-left: 4px solid #c9a84c; }
-
-    /* Progress */
     .progress-section { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
     .progress-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #8a7560; }
     .progress-pct { font-size: 20px; font-weight: bold; }
     .progress-track { height: 6px; background: #e0d8c8; border-radius: 99px; }
     .progress-fill { height: 6px; border-radius: 99px; transition: width 0.4s ease; }
     .progress-date { font-size: 11px; color: #8a7560; margin-top: 6px; }
-
-    /* Mood */
     .section-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #8a7560; margin-bottom: 10px; }
     .mood-btns { display: flex; gap: 8px; flex-wrap: wrap; }
     .mood-btn { border: 1px solid #c9a84c; border-radius: 20px; padding: 5px 12px; font-size: 12px; background: #f5f0e8; color: #2c2416; }
     .mood-btn.selected { background: #2c2416; color: #c9a84c; }
-
-    /* Group */
     .group-header { display: flex; align-items: center; justify-content: space-between; padding: 12px 18px; cursor: pointer; }
-    .group-header .left { display: flex; align-items: center; gap: 10px; }
-    .group-header .right { display: flex; align-items: center; gap: 10px; }
     .group-title { font-size: 14px; font-weight: bold; }
-    .group-badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; background: #f0ebe0; color: #8a7560; }
+    .group-badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; background: #f0ebe0; color: #8a7560; margin-left: 10px; }
     .group-badge.complete { background: #d4edd4; color: #5a8a5a; }
     .group-mini-bar { width: 50px; height: 4px; background: #e0d8c8; border-radius: 99px; }
     .group-mini-fill { height: 4px; border-radius: 99px; transition: width 0.3s; }
-    .group-chevron { color: #c9a84c; font-size: 11px; }
     .group-tasks { padding: 12px 18px; }
-
-    /* Task row */
     .task-row { margin-bottom: 10px; }
     .task-main { display: flex; align-items: flex-start; gap: 10px; }
     .task-check { accent-color: #c9a84c; width: 15px; height: 15px; margin-top: 3px; cursor: pointer; flex-shrink: 0; }
@@ -78,49 +51,32 @@
     .task-label { font-size: 14px; line-height: 1.45; }
     .task-label.done { color: #aaa; text-decoration: line-through; }
     .task-note { margin-top: 3px; width: 100%; border: none; border-bottom: 1px dashed #e0d8c8; background: transparent; font-size: 12px; color: #8a7560; outline: none; padding: 1px 0; }
-    .sub-item-btn { background: none; border: 1px dashed #c9a84c; color: #c9a84c; border-radius: 4px; font-size: 11px; padding: 1px 7px; margin-left: 8px; line-height: 1.5; }
-
-    /* Sub items */
+    .sub-item-btn { background: none; border: 1px dashed #c9a84c; color: #c9a84c; border-radius: 4px; font-size: 11px; padding: 1px 7px; margin-left: 8px; line-height: 1.5; cursor: pointer; }
     .sub-item { display: flex; align-items: center; gap: 8px; margin-top: 6px; padding-left: 30px; }
     .sub-divider { width: 1px; height: 16px; background: #c9a84c; margin-right: 2px; opacity: 0.4; flex-shrink: 0; }
     .sub-check { accent-color: #c9a84c; width: 13px; height: 13px; cursor: pointer; flex-shrink: 0; }
     .sub-input { flex: 1; border: none; border-bottom: 1px dashed #e0d8c8; background: transparent; font-size: 13px; outline: none; padding: 1px 0; }
-    .sub-remove { background: none; border: none; color: #c9a84c; font-size: 16px; line-height: 1; }
-
-    /* Adhoc */
+    .sub-remove { background: none; border: none; color: #c9a84c; font-size: 16px; line-height: 1; cursor: pointer; }
     .adhoc-header { display: flex; align-items: center; justify-content: space-between; padding: 12px 18px; border-bottom: 1px solid #e0d8c8; }
     .adhoc-title { font-size: 14px; font-weight: bold; }
     .adhoc-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
     .adhoc-input { flex: 1; border: none; border-bottom: 1px dashed #c9a84c; background: transparent; font-size: 14px; outline: none; padding: 2px 0; }
-    .adhoc-remove { background: none; border: none; color: #c9a84c; font-size: 18px; }
+    .adhoc-remove { background: none; border: none; color: #c9a84c; font-size: 18px; cursor: pointer; }
     .empty-msg { color: #8a7560; font-size: 13px; font-style: italic; }
-
-    /* Textarea */
     .journal-textarea { width: 100%; border: 1px dashed #c9a84c; border-radius: 6px; padding: 10px 12px; font-size: 13px; color: #2c2416; background: #fdfaf4; outline: none; line-height: 1.6; }
-
-    /* Buttons */
-    .btn-gold { background: #c9a84c; color: #2c2416; border: none; border-radius: 4px; padding: 6px 12px; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; }
-    .btn-dark { background: #2c2416; color: #c9a84c; border: 2px solid #c9a84c; border-radius: 6px; padding: 11px 30px; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; }
-    .btn-outline { background: transparent; color: #2c2416; border: 1px solid #c9a84c; border-radius: 4px; padding: 4px 10px; font-size: 11px; }
-    .btn-icon { background: none; border: none; color: #c9a84c; font-size: 17px; }
-    .btn-retry { background: #2c2416; color: #c9a84c; border: 2px solid #c9a84c; border-radius: 6px; padding: 10px 24px; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; }
-
-    /* History */
+    .btn-gold { background: #c9a84c; color: #2c2416; border: none; border-radius: 4px; padding: 6px 12px; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; cursor: pointer; font-family: Georgia, serif; }
+    .btn-dark { background: #2c2416; color: #c9a84c; border: 2px solid #c9a84c; border-radius: 6px; padding: 11px 30px; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; font-family: Georgia, serif; }
+    .btn-outline { background: transparent; color: #2c2416; border: 1px solid #c9a84c; border-radius: 4px; padding: 4px 10px; font-size: 11px; cursor: pointer; font-family: Georgia, serif; }
+    .btn-icon { background: none; border: none; color: #c9a84c; font-size: 17px; cursor: pointer; }
+    .btn-retry { background: #2c2416; color: #c9a84c; border: 2px solid #c9a84c; border-radius: 6px; padding: 10px 24px; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; font-family: Georgia, serif; }
     .history-entry { background: #fff; border: 1px solid #e0d8c8; border-radius: 8px; padding: 12px 16px; margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between; }
     .history-date { font-weight: bold; margin-bottom: 2px; }
     .history-meta { font-size: 12px; color: #8a7560; }
     .history-actions { display: flex; gap: 8px; }
-
-    /* Settings */
-    .settings-input { border: 1px solid #e0d8c8; border-radius: 6px; padding: 6px 10px; font-size: 13px; color: #2c2416; background: #fdfaf4; outline: none; }
+    .settings-input { border: 1px solid #e0d8c8; border-radius: 6px; padding: 6px 10px; font-size: 13px; color: #2c2416; background: #fdfaf4; outline: none; font-family: Georgia, serif; }
     .settings-row { display: flex; gap: 8px; margin-bottom: 7px; align-items: center; }
-
-    /* Download center */
     .download-center { text-align: center; margin-bottom: 32px; }
-
-    /* Page title */
     .page-title { font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: #8a7560; margin-bottom: 20px; font-weight: normal; }
-
     code { background: #f0ebe0; padding: 2px 6px; border-radius: 3px; font-size: 12px; }
   </style>
 </head>
@@ -149,6 +105,7 @@ const todayStr = () => new Date().toISOString().split("T")[0];
 const formatDate = iso => { const [y,m,d]=iso.split("-"); return new Date(y,m-1,d).toLocaleDateString("en-US",{weekday:"long",year:"numeric",month:"long",day:"numeric"}); };
 const makeTaskObj = label => ({ label, done:false, note:"", subItems:[] });
 const initGroups = groups => groups.map(g => ({...g, tasks:g.tasks.map(makeTaskObj)}));
+const escHtml = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
 
 // ── State ──────────────────────────────────────────────────────────────────
 let state = {
@@ -159,16 +116,11 @@ let state = {
   currentDate: todayStr(),
   historyDate: null,
   expandedGroups: {},
-  settingsNewTask: {},
-  editingGroupIdx: null,
-  editingGroupLabel: "",
-  newGroupLabel: "",
 };
 let saveTimer = null;
+let renderScheduled = false;
 
-function setState(patch) { Object.assign(state, patch); render(); }
-
-// ── Supabase ──────────────────────────────────────────────────────────────
+// ── Supabase ───────────────────────────────────────────────────────────────
 async function dbLoad() {
   const r = await fetch(`${SUPABASE_URL}/rest/v1/journal?id=eq.main&select=data`, {
     headers: { apikey: SUPABASE_KEY, Authorization: `Bearer ${SUPABASE_KEY}` }
@@ -188,14 +140,31 @@ async function dbSave(payload) {
 }
 
 function scheduleSave() {
-  setState({ syncStatus:"saving" });
+  setSyncStatus("saving");
   if (saveTimer) clearTimeout(saveTimer);
   saveTimer = setTimeout(async () => {
     try {
       await dbSave({ taskGroups: state.taskGroups, entries: state.entries });
-      setState({ syncStatus:"synced" });
-    } catch { setState({ syncStatus:"error" }); }
-  }, 600);
+      setSyncStatus("synced");
+    } catch { setSyncStatus("error"); }
+  }, 800);
+}
+
+function setSyncStatus(s) {
+  state.syncStatus = s;
+  const el = document.querySelector("header .sync");
+  if (!el) return;
+  const label = { saving:"☁️ Saving…", synced:"✓ Synced", error:"⚠️ Sync error", loading:"⏳ Connecting…" }[s] || "";
+  const color = { synced:"#5a8a5a", saving:"#a08840", error:"#c0392b", loading:"#a08840" }[s];
+  el.textContent = label;
+  el.style.color = color;
+}
+
+// ── Schedule a render without clobbering focused inputs ────────────────────
+function scheduleRender() {
+  if (renderScheduled) return;
+  renderScheduled = true;
+  requestAnimationFrame(() => { renderScheduled = false; render(); });
 }
 
 // ── Entry helpers ──────────────────────────────────────────────────────────
@@ -203,61 +172,120 @@ function getEntry(date) {
   return state.entries[date] || { groups: initGroups(state.taskGroups), adhocTasks:[], notes:"", reflection:"", mood:"" };
 }
 
-function updateEntry(date, patch) {
-  const current = getEntry(date);
-  const updated = { ...state.entries, [date]: { ...current, ...patch } };
-  setState({ entries: updated });
+function mutateEntry(date, fn) {
+  const entry = JSON.parse(JSON.stringify(getEntry(date)));
+  fn(entry);
+  state.entries = { ...state.entries, [date]: entry };
+  scheduleSave();
+  scheduleRender();
+}
+
+function toggleTask(gIdx, tIdx) {
+  mutateEntry(state.currentDate, e => { e.groups[gIdx].tasks[tIdx].done = !e.groups[gIdx].tasks[tIdx].done; });
+}
+function addSubItem(gIdx, tIdx) {
+  mutateEntry(state.currentDate, e => { e.groups[gIdx].tasks[tIdx].subItems.push({label:"",done:false}); });
+}
+function toggleSubItem(gIdx, tIdx, sIdx) {
+  mutateEntry(state.currentDate, e => { e.groups[gIdx].tasks[tIdx].subItems[sIdx].done = !e.groups[gIdx].tasks[tIdx].subItems[sIdx].done; });
+}
+function removeSubItem(gIdx, tIdx, sIdx) {
+  mutateEntry(state.currentDate, e => { e.groups[gIdx].tasks[tIdx].subItems.splice(sIdx,1); });
+}
+function addAdhoc() {
+  mutateEntry(state.currentDate, e => { e.adhocTasks.push({label:"",done:false}); });
+}
+function toggleAdhoc(i) {
+  mutateEntry(state.currentDate, e => { e.adhocTasks[i].done = !e.adhocTasks[i].done; });
+}
+function removeAdhoc(i) {
+  mutateEntry(state.currentDate, e => { e.adhocTasks.splice(i,1); });
+}
+function setMood(m) {
+  mutateEntry(state.currentDate, e => { e.mood = m; });
+}
+
+// ── Live text input handlers (no re-render, just save) ─────────────────────
+function onTaskNoteInput(gIdx, tIdx, val) {
+  const entry = getEntry(state.currentDate);
+  entry.groups[gIdx].tasks[tIdx].note = val;
+  state.entries = { ...state.entries, [state.currentDate]: entry };
+  scheduleSave();
+}
+function onSubLabelInput(gIdx, tIdx, sIdx, val) {
+  const entry = getEntry(state.currentDate);
+  entry.groups[gIdx].tasks[tIdx].subItems[sIdx].label = val;
+  state.entries = { ...state.entries, [state.currentDate]: entry };
+  scheduleSave();
+}
+function onAdhocLabelInput(i, val) {
+  const entry = getEntry(state.currentDate);
+  entry.adhocTasks[i].label = val;
+  state.entries = { ...state.entries, [state.currentDate]: entry };
+  scheduleSave();
+}
+function onNotesInput(val) {
+  const entry = getEntry(state.currentDate);
+  entry.notes = val;
+  state.entries = { ...state.entries, [state.currentDate]: entry };
+  scheduleSave();
+}
+function onReflectionInput(val) {
+  const entry = getEntry(state.currentDate);
+  entry.reflection = val;
+  state.entries = { ...state.entries, [state.currentDate]: entry };
   scheduleSave();
 }
 
-function updateGroups(groups) { updateEntry(state.currentDate, { groups }); }
-
-function toggleTask(gIdx, tIdx) {
-  const e = getEntry(state.currentDate);
-  updateGroups(e.groups.map((g,gi) => gi!==gIdx?g:{...g,tasks:g.tasks.map((t,ti)=>ti!==tIdx?t:{...t,done:!t.done})}));
-}
-function updateTaskNote(gIdx, tIdx, note) {
-  const e = getEntry(state.currentDate);
-  updateGroups(e.groups.map((g,gi)=>gi!==gIdx?g:{...g,tasks:g.tasks.map((t,ti)=>ti!==tIdx?t:{...t,note})}));
-}
-function addSubItem(gIdx, tIdx) {
-  const e = getEntry(state.currentDate);
-  updateGroups(e.groups.map((g,gi)=>gi!==gIdx?g:{...g,tasks:g.tasks.map((t,ti)=>ti!==tIdx?t:{...t,subItems:[...(t.subItems||[]),{label:"",done:false}]})}));
-}
-function updateSubItem(gIdx,tIdx,sIdx,field,val) {
-  const e=getEntry(state.currentDate);
-  updateGroups(e.groups.map((g,gi)=>gi!==gIdx?g:{...g,tasks:g.tasks.map((t,ti)=>ti!==tIdx?t:{...t,subItems:(t.subItems||[]).map((s,si)=>si!==sIdx?s:{...s,[field]:val})})}));
-}
-function removeSubItem(gIdx,tIdx,sIdx) {
-  const e=getEntry(state.currentDate);
-  updateGroups(e.groups.map((g,gi)=>gi!==gIdx?g:{...g,tasks:g.tasks.map((t,ti)=>ti!==tIdx?t:{...t,subItems:(t.subItems||[]).filter((_,si)=>si!==sIdx)})}));
-}
-function addAdhoc() { const e=getEntry(state.currentDate); updateEntry(state.currentDate,{adhocTasks:[...(e.adhocTasks||[]),{label:"",done:false}]}); }
-function updateAdhocLabel(i,val) { const e=getEntry(state.currentDate); updateEntry(state.currentDate,{adhocTasks:(e.adhocTasks||[]).map((a,idx)=>idx===i?{...a,label:val}:a)}); }
-function toggleAdhoc(i) { const e=getEntry(state.currentDate); updateEntry(state.currentDate,{adhocTasks:(e.adhocTasks||[]).map((a,idx)=>idx===i?{...a,done:!a.done}:a)}); }
-function removeAdhoc(i) { const e=getEntry(state.currentDate); updateEntry(state.currentDate,{adhocTasks:(e.adhocTasks||[]).filter((_,idx)=>idx!==i)}); }
-function setField(field,val) { updateEntry(state.currentDate,{[field]:val}); }
-
-function isExpandableOther(groupId,taskLabel) {
-  return (EXPANDABLE_OTHER_GROUPS.includes(groupId) && taskLabel==="Other") ||
-    (groupId==="business" && ["NS&BC+","Crypto Cards","CryptEd"].includes(taskLabel));
+// ── Group toggle ───────────────────────────────────────────────────────────
+function toggleGroup(id) {
+  state.expandedGroups[id] = state.expandedGroups[id] === false ? undefined : false;
+  scheduleRender();
 }
 
-function progress() {
-  const e=getEntry(state.currentDate);
-  const allStd=(e.groups||[]).flatMap(g=>g.tasks||[]);
-  const allSub=allStd.flatMap(t=>t.subItems||[]);
-  const total=allStd.length+allSub.length+(e.adhocTasks?.length||0);
-  const done=allStd.filter(t=>t.done).length+allSub.filter(s=>s.done).length+(e.adhocTasks?.filter(t=>t.done).length||0);
+// ── Settings helpers ───────────────────────────────────────────────────────
+function deleteGroup(gIdx) {
+  if (!confirm(`Delete "${state.taskGroups[gIdx].label}"?`)) return;
+  state.taskGroups = state.taskGroups.filter((_,i)=>i!==gIdx);
+  scheduleSave(); scheduleRender();
+}
+function removeSettingsTask(gIdx, tIdx) {
+  state.taskGroups[gIdx].tasks = state.taskGroups[gIdx].tasks.filter((_,i)=>i!==tIdx);
+  scheduleSave(); scheduleRender();
+}
+function addSettingsTask(gIdx) {
+  const inp = document.getElementById(`new-task-${state.taskGroups[gIdx].id}`);
+  if (!inp || !inp.value.trim()) return;
+  state.taskGroups[gIdx].tasks.push(inp.value.trim());
+  scheduleSave(); scheduleRender();
+}
+function onSettingsTaskInput(gIdx, tIdx, val) {
+  state.taskGroups[gIdx].tasks[tIdx] = val;
+  scheduleSave();
+}
+function addGroup() {
+  const inp = document.getElementById("new-group-label");
+  if (!inp || !inp.value.trim()) return;
+  state.taskGroups.push({id:"group-"+Date.now(), label:inp.value.trim(), tasks:[]});
+  scheduleSave(); scheduleRender();
+}
+
+// ── Navigation ─────────────────────────────────────────────────────────────
+function setView(v) { state.view=v; state.historyDate=null; scheduleRender(); }
+function setHistoryDate(d) { state.historyDate=d; scheduleRender(); }
+
+// ── Progress ───────────────────────────────────────────────────────────────
+function calcProgress() {
+  const e = getEntry(state.currentDate);
+  const allStd = (e.groups||[]).flatMap(g=>g.tasks||[]);
+  const allSub = allStd.flatMap(t=>t.subItems||[]);
+  const total = allStd.length + allSub.length + (e.adhocTasks?.length||0);
+  const done = allStd.filter(t=>t.done).length + allSub.filter(s=>s.done).length + (e.adhocTasks?.filter(t=>t.done).length||0);
   return total===0?0:Math.round((done/total)*100);
 }
 
-function showToast(msg) {
-  const el=document.getElementById("toast"); el.textContent=msg; el.style.display="block";
-  setTimeout(()=>el.style.display="none",2500);
-}
-
-function generateMarkdown(date,e) {
+// ── Markdown export ────────────────────────────────────────────────────────
+function generateMarkdown(date, e) {
   const lines=[`# Daily Journal — ${formatDate(date)}`,"",`**Mood:** ${e.mood||"_Not recorded_"}`,""];
   (e.groups||[]).forEach(g=>{
     const allT=g.tasks||[]; const allSub=allT.flatMap(t=>t.subItems||[]);
@@ -272,41 +300,46 @@ function generateMarkdown(date,e) {
   lines.push("## End-of-Day Reflection"); lines.push(e.reflection||"_None_");
   return lines.join("\n");
 }
-
-function downloadMarkdown(date,e) {
+function downloadMarkdown(date) {
+  const e = getEntry(date);
   const blob=new Blob([generateMarkdown(date,e)],{type:"text/markdown"});
   const url=URL.createObjectURL(blob); const a=document.createElement("a"); a.href=url; a.download=`journal-${date}.md`; a.click(); URL.revokeObjectURL(url);
   showToast("Journal downloaded!");
 }
+function showToast(msg) {
+  const el=document.getElementById("toast"); el.textContent=msg; el.style.display="block";
+  setTimeout(()=>el.style.display="none",2500);
+}
 
-// ── Render ────────────────────────────────────────────────────────────────
+// ── Retry ──────────────────────────────────────────────────────────────────
+function retryLoad() { state.syncStatus="loading"; render(); init(); }
+
+// ── Render ─────────────────────────────────────────────────────────────────
 function render() {
-  const app = document.getElementById("app");
   const { view, syncStatus, taskGroups, entries, currentDate, historyDate, expandedGroups } = state;
 
   if (syncStatus==="loading") {
-    app.innerHTML=`<div class="center-screen"><div class="icon">✦</div><div class="msg">Connecting to Supabase…</div><div class="progress-bar-wrap"><div class="progress-bar-inner"></div></div></div>`;
+    document.getElementById("app").innerHTML=`<div class="center-screen"><div style="font-size:28px">✦</div><div style="font-size:14px;color:#8a7560;letter-spacing:2px;text-transform:uppercase">Connecting to Supabase…</div><div class="progress-bar-wrap"><div class="progress-bar-inner"></div></div></div>`;
     return;
   }
-
   if (syncStatus==="error") {
-    app.innerHTML=`<div class="center-screen"><div class="icon">⚠️</div><div class="msg" style="color:#c0392b">Cannot connect to Supabase</div><div class="sub">Check that your Supabase project is active and the <code>journal</code> table exists with a row where <code>id = 'main'</code>. Then retry.</div><button class="btn-retry" onclick="retryLoad()">Retry</button></div>`;
+    document.getElementById("app").innerHTML=`<div class="center-screen"><div style="font-size:28px">⚠️</div><div style="font-size:15px;font-weight:bold">Cannot connect to Supabase</div><div style="font-size:13px;color:#8a7560;max-width:340px;line-height:1.6">Check that your Supabase project is active and the <code>journal</code> table has a row with <code>id = 'main'</code>.</div><button class="btn-retry" onclick="retryLoad()">Retry</button></div>`;
     return;
   }
 
-  const syncLabel = { saving:"☁️ Saving…", synced:"✓ Synced" }[syncStatus] || "✓ Synced";
-  const syncColor = syncStatus==="synced" ? "#5a8a5a" : "#a08840";
-
+  const syncLabel = { saving:"☁️ Saving…", synced:"✓ Synced" }[syncStatus]||"✓ Synced";
+  const syncColor = syncStatus==="synced"?"#5a8a5a":"#a08840";
   const entry = getEntry(currentDate);
-  const pct = progress();
+  const pct = calcProgress();
   const historyDates = Object.keys(entries).filter(d=>d!==currentDate).sort((a,b)=>b.localeCompare(a));
 
+  // ── Build content ──
   let content = "";
 
   if (view==="journal") {
-    const groups = (entry.groups || initGroups(taskGroups));
+    // Groups
     let groupsHtml = "";
-    groups.forEach((group,gIdx) => {
+    (entry.groups||initGroups(taskGroups)).forEach((group,gIdx) => {
       const allT=group.tasks||[]; const allSub=allT.flatMap(t=>t.subItems||[]);
       const done=allT.filter(t=>t.done).length+allSub.filter(s=>s.done).length;
       const total=allT.length+allSub.length;
@@ -314,17 +347,16 @@ function render() {
       const complete=done===total&&total>0;
       const fillPct=total===0?0:Math.round((done/total)*100);
       let tasksHtml="";
-      if(isOpen){
-        allT.forEach((task,tIdx)=>{
+      if (isOpen) {
+        allT.forEach((task,tIdx) => {
           const expandable=isExpandableOther(group.id,task.label);
-          const subItems=task.subItems||[];
           let subHtml="";
-          if(expandable){
-            subItems.forEach((s,sIdx)=>{
+          if (expandable) {
+            (task.subItems||[]).forEach((s,sIdx) => {
               subHtml+=`<div class="sub-item">
                 <div class="sub-divider"></div>
-                <input type="checkbox" class="sub-check" ${s.done?"checked":""} onchange="updateSubItem(${gIdx},${tIdx},${sIdx},'done',this.checked)">
-                <input class="sub-input" value="${escHtml(s.label)}" placeholder="Sub-item…" style="color:${s.done?'#aaa':'#2c2416'};text-decoration:${s.done?'line-through':'none'}" oninput="updateSubItem(${gIdx},${tIdx},${sIdx},'label',this.value)">
+                <input type="checkbox" class="sub-check" ${s.done?"checked":""} onchange="toggleSubItem(${gIdx},${tIdx},${sIdx})">
+                <input class="sub-input" value="${escHtml(s.label)}" placeholder="Sub-item…" style="color:${s.done?'#aaa':'#2c2416'};text-decoration:${s.done?'line-through':'none'}" oninput="onSubLabelInput(${gIdx},${tIdx},${sIdx},this.value)">
                 <button class="sub-remove" onclick="removeSubItem(${gIdx},${tIdx},${sIdx})">×</button>
               </div>`;
             });
@@ -334,36 +366,36 @@ function render() {
               <input type="checkbox" class="task-check" ${task.done?"checked":""} onchange="toggleTask(${gIdx},${tIdx})">
               <div class="task-body">
                 <div style="display:flex;align-items:center;gap:8px">
-                  <span class="task-label ${task.done?'done':''}">${escHtml(task.label)}</span>
+                  <span class="task-label${task.done?' done':''}">${escHtml(task.label)}</span>
                   ${expandable?`<button class="sub-item-btn" onclick="addSubItem(${gIdx},${tIdx})">+ sub-item</button>`:""}
                 </div>
-                <input class="task-note" value="${escHtml(task.note||'')}" placeholder="Note…" oninput="updateTaskNote(${gIdx},${tIdx},this.value)">
+                <input class="task-note" value="${escHtml(task.note||'')}" placeholder="Note…" oninput="onTaskNoteInput(${gIdx},${tIdx},this.value)">
               </div>
-            </div>
-            ${subHtml}
+            </div>${subHtml}
           </div>`;
         });
       }
-      groupsHtml+=`<div class="card" style="border-color:${complete?'#b8d8b8':'#e0d8c8'}">
+      groupsHtml+=`<div class="card" style="border-color:${complete?'#b8d8b8':'#e0d8c8'};margin-bottom:12px">
         <div class="group-header" style="background:${complete?'#f0f7f0':'transparent'};border-bottom:${isOpen?`1px solid ${complete?'#b8d8b8':'#e0d8c8'}`:'none'}" onclick="toggleGroup('${group.id}')">
-          <div class="left">
+          <div style="display:flex;align-items:center">
             <span class="group-title">${escHtml(group.label)}</span>
-            <span class="group-badge ${complete?'complete':''}">${done}/${total}</span>
+            <span class="group-badge${complete?' complete':''}">${done}/${total}</span>
           </div>
-          <div class="right">
+          <div style="display:flex;align-items:center;gap:10px">
             <div class="group-mini-bar"><div class="group-mini-fill" style="width:${fillPct}%;background:${complete?'#5a8a5a':'#c9a84c'}"></div></div>
-            <span class="group-chevron">${isOpen?"▲":"▼"}</span>
+            <span style="color:#c9a84c;font-size:11px">${isOpen?"▲":"▼"}</span>
           </div>
         </div>
         ${isOpen?`<div class="group-tasks">${tasksHtml}</div>`:""}
       </div>`;
     });
 
-    let adhocHtml="";
-    (entry.adhocTasks||[]).forEach((t,i)=>{
-      adhocHtml+=`<div class="adhoc-row">
+    // Adhoc
+    let adhocRows="";
+    (entry.adhocTasks||[]).forEach((t,i) => {
+      adhocRows+=`<div class="adhoc-row">
         <input type="checkbox" class="task-check" ${t.done?"checked":""} onchange="toggleAdhoc(${i})">
-        <input class="adhoc-input" value="${escHtml(t.label)}" placeholder="Task description…" style="color:${t.done?'#aaa':'#2c2416'};text-decoration:${t.done?'line-through':'none'}" oninput="updateAdhocLabel(${i},this.value)">
+        <input class="adhoc-input" value="${escHtml(t.label)}" placeholder="Task description…" style="color:${t.done?'#aaa':'#2c2416'};text-decoration:${t.done?'line-through':'none'}" oninput="onAdhocLabelInput(${i},this.value)">
         <button class="adhoc-remove" onclick="removeAdhoc(${i})">×</button>
       </div>`;
     });
@@ -380,30 +412,34 @@ function render() {
       </div>
       <div class="card card-body" style="margin-bottom:18px">
         <div class="section-label">How are you feeling?</div>
-        <div class="mood-btns">${MOODS.map(m=>`<button class="mood-btn ${entry.mood===m?'selected':''}" onclick="setField('mood','${m}')">${m}</button>`).join("")}</div>
+        <div class="mood-btns">${MOODS.map(m=>`<button class="mood-btn${entry.mood===m?' selected':''}" onclick="setMood('${m}')">${m}</button>`).join("")}</div>
       </div>
       ${groupsHtml}
       <div class="card" style="margin-bottom:12px">
         <div class="adhoc-header"><span class="adhoc-title">📌 Ad-hoc Tasks</span><button class="btn-gold" onclick="addAdhoc()">+ Add</button></div>
-        <div class="card-body">${(entry.adhocTasks||[]).length===0?'<div class="empty-msg">No ad-hoc tasks yet.</div>':adhocHtml}</div>
+        <div class="card-body" id="adhoc-list">${(entry.adhocTasks||[]).length===0?'<div class="empty-msg">No ad-hoc tasks yet.</div>':adhocRows}</div>
       </div>
       <div class="card card-body" style="margin-bottom:12px">
         <div class="section-label">Notes</div>
-        <textarea class="journal-textarea" rows="4" placeholder="Capture thoughts, updates, ideas, links…" oninput="setField('notes',this.value)">${escHtml(entry.notes||"")}</textarea>
+        <textarea class="journal-textarea" rows="4" placeholder="Capture thoughts, updates, ideas, links…" oninput="onNotesInput(this.value)">${escHtml(entry.notes||"")}</textarea>
       </div>
       <div class="card card-body" style="margin-bottom:24px">
         <div class="section-label">End-of-Day Reflection</div>
-        <textarea class="journal-textarea" rows="4" placeholder="What went well? What would you do differently? What are you grateful for?" oninput="setField('reflection',this.value)">${escHtml(entry.reflection||"")}</textarea>
+        <textarea class="journal-textarea" rows="4" placeholder="What went well? What would you do differently? What are you grateful for?" oninput="onReflectionInput(this.value)">${escHtml(entry.reflection||"")}</textarea>
       </div>
       <div class="download-center">
-        <button class="btn-dark" onclick="downloadMarkdown('${currentDate}',getEntry('${currentDate}'))">↓ Download Today's Journal (.md)</button>
+        <button class="btn-dark" onclick="downloadMarkdown('${currentDate}')">↓ Download Today's Journal (.md)</button>
       </div>`;
   }
 
   if (view==="history" && !historyDate) {
-    let rows="";
-    if(historyDates.length===0){ rows='<div class="empty-msg">No past entries yet.</div>'; }
-    else { historyDates.forEach(d=>{ const e=entries[d]; const allT=(e.groups||[]).flatMap(g=>g.tasks||[]); const allSub=allT.flatMap(t=>t.subItems||[]); const done=allT.filter(t=>t.done).length+allSub.filter(s=>s.done).length+(e.adhocTasks?.filter(t=>t.done).length||0); const total=allT.length+allSub.length+(e.adhocTasks?.length||0); rows+=`<div class="history-entry"><div><div class="history-date">${formatDate(d)}</div><div class="history-meta">${done}/${total} tasks · ${e.mood||"No mood recorded"}</div></div><div class="history-actions"><button class="btn-outline" onclick="setState({historyDate:'${d}'})">View</button><button class="btn-outline" onclick="downloadMarkdown('${d}',getEntry('${d}'))">↓ .md</button></div></div>`; }); }
+    let rows = historyDates.length===0 ? '<div class="empty-msg">No past entries yet.</div>' : "";
+    historyDates.forEach(d => {
+      const e=entries[d]; const allT=(e.groups||[]).flatMap(g=>g.tasks||[]); const allSub=allT.flatMap(t=>t.subItems||[]);
+      const done=allT.filter(t=>t.done).length+allSub.filter(s=>s.done).length+(e.adhocTasks?.filter(t=>t.done).length||0);
+      const total=allT.length+allSub.length+(e.adhocTasks?.length||0);
+      rows+=`<div class="history-entry"><div><div class="history-date">${formatDate(d)}</div><div class="history-meta">${done}/${total} tasks · ${e.mood||"No mood recorded"}</div></div><div class="history-actions"><button class="btn-outline" onclick="setHistoryDate('${d}')">View</button><button class="btn-outline" onclick="downloadMarkdown('${d}')">↓ .md</button></div></div>`;
+    });
     content=`<h2 class="page-title">Past Entries</h2>${rows}`;
   }
 
@@ -413,21 +449,16 @@ function render() {
     (e.groups||[]).forEach((g,gi)=>{
       let tasksHtml="";
       (g.tasks||[]).forEach((t,ti)=>{
-        let subHtml=""; (t.subItems||[]).forEach((s,si)=>{ subHtml+=`<div style="display:flex;gap:8px;align-items:center;padding-left:28px;margin-top:4px"><input type="checkbox" ${s.done?"checked":""} disabled style="accent-color:#c9a84c;width:12px;height:12px"><span style="font-size:12px;color:${s.done?'#aaa':'#2c2416'};text-decoration:${s.done?'line-through':'none'}">${escHtml(s.label||"(unnamed)")}</span></div>`; });
+        let subHtml=""; (t.subItems||[]).forEach(s=>{ subHtml+=`<div style="display:flex;gap:8px;align-items:center;padding-left:28px;margin-top:4px"><input type="checkbox" ${s.done?"checked":""} disabled style="accent-color:#c9a84c;width:12px;height:12px"><span style="font-size:12px;color:${s.done?'#aaa':'#2c2416'};text-decoration:${s.done?'line-through':'none'}">${escHtml(s.label||"(unnamed)")}</span></div>`; });
         tasksHtml+=`<div style="margin-bottom:6px"><div style="display:flex;gap:8px;align-items:flex-start"><input type="checkbox" ${t.done?"checked":""} disabled style="accent-color:#c9a84c;margin-top:2px"><div><div style="font-size:13px;color:${t.done?'#aaa':'#2c2416'};text-decoration:${t.done?'line-through':'none'}">${escHtml(t.label)}</div>${t.note?`<div style="font-size:11px;color:#8a7560;font-style:italic">${escHtml(t.note)}</div>`:""}</div></div>${subHtml}</div>`;
       });
       groupsHtml+=`<div class="card" style="margin-bottom:10px;padding:12px 16px"><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8a7560;margin-bottom:8px">${escHtml(g.label)}</div>${tasksHtml}</div>`;
     });
     let adhocHtml="";
-    if((e.adhocTasks||[]).length>0){ let rows=""; e.adhocTasks.forEach((t,i)=>{ rows+=`<div style="display:flex;gap:8px;align-items:center;margin-bottom:5px"><input type="checkbox" ${t.done?"checked":""} disabled style="accent-color:#c9a84c"><span style="font-size:13px;color:${t.done?'#aaa':'#2c2416'};text-decoration:${t.done?'line-through':'none'}">${escHtml(t.label||"(unnamed)")}</span></div>`; }); adhocHtml=`<div class="card" style="margin-bottom:10px;padding:12px 16px"><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8a7560;margin-bottom:8px">Ad-hoc Tasks</div>${rows}</div>`; }
+    if((e.adhocTasks||[]).length>0){ let rows=""; e.adhocTasks.forEach(t=>{rows+=`<div style="display:flex;gap:8px;align-items:center;margin-bottom:5px"><input type="checkbox" ${t.done?"checked":""} disabled style="accent-color:#c9a84c"><span style="font-size:13px;color:${t.done?'#aaa':'#2c2416'};text-decoration:${t.done?'line-through':'none'}">${escHtml(t.label||"(unnamed)")}</span></div>`;}); adhocHtml=`<div class="card" style="margin-bottom:10px;padding:12px 16px"><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8a7560;margin-bottom:8px">Ad-hoc Tasks</div>${rows}</div>`; }
     const notesHtml=e.notes?`<div class="card" style="margin-bottom:10px;padding:12px 16px"><div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8a7560;margin-bottom:6px">Notes</div><div style="white-space:pre-wrap;font-size:13px">${escHtml(e.notes)}</div></div>`:"";
     const reflHtml=e.reflection?`<div class="card" style="margin-bottom:10px;padding:12px 16px"><div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8a7560;margin-bottom:6px">Reflection</div><div style="white-space:pre-wrap;font-size:13px">${escHtml(e.reflection)}</div></div>`:"";
-    content=`
-      <button class="btn-outline" style="margin-bottom:18px" onclick="setState({historyDate:null})">← Back</button>
-      <h2 style="font-size:17px;margin-bottom:6px">${formatDate(historyDate)}</h2>
-      ${e.mood?`<div style="margin-bottom:14px;color:#8a7560;font-size:13px">Mood: ${e.mood}</div>`:""}
-      ${groupsHtml}${adhocHtml}${notesHtml}${reflHtml}
-      <div style="text-align:center;margin-top:18px"><button class="btn-dark" onclick="downloadMarkdown('${historyDate}',getEntry('${historyDate}'))">↓ Download (.md)</button></div>`;
+    content=`<button class="btn-outline" style="margin-bottom:18px" onclick="setHistoryDate(null)">← Back</button><h2 style="font-size:17px;margin-bottom:6px">${formatDate(historyDate)}</h2>${e.mood?`<div style="margin-bottom:14px;color:#8a7560;font-size:13px">Mood: ${e.mood}</div>`:""}${groupsHtml}${adhocHtml}${notesHtml}${reflHtml}<div style="text-align:center;margin-top:18px"><button class="btn-dark" onclick="downloadMarkdown('${historyDate}')">↓ Download (.md)</button></div>`;
   }
 
   if (view==="settings") {
@@ -435,7 +466,7 @@ function render() {
     taskGroups.forEach((group,gIdx)=>{
       let tasksHtml="";
       group.tasks.forEach((task,tIdx)=>{
-        tasksHtml+=`<div class="settings-row"><input class="settings-input" style="flex:1;font-size:12px" value="${escHtml(task)}" oninput="updateSettingsTask(${gIdx},${tIdx},this.value)"><button class="btn-icon" onclick="removeSettingsTask(${gIdx},${tIdx})">×</button></div>`;
+        tasksHtml+=`<div class="settings-row"><input class="settings-input" style="flex:1;font-size:12px" value="${escHtml(task)}" oninput="onSettingsTaskInput(${gIdx},${tIdx},this.value)"><button class="btn-icon" onclick="removeSettingsTask(${gIdx},${tIdx})">×</button></div>`;
       });
       groupsHtml+=`<div class="card" style="margin-bottom:14px">
         <div class="card-header-dark">
@@ -451,20 +482,10 @@ function render() {
         </div>
       </div>`;
     });
-    content=`
-      <h2 class="page-title">Standard Task Groups</h2>
-      <p style="font-size:12px;color:#8a7560;margin-bottom:20px">Manage your recurring tasks by group. Changes apply to new days.</p>
-      ${groupsHtml}
-      <div class="card" style="border:1px dashed #c9a84c;padding:12px 14px;margin-top:6px">
-        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8a7560;margin-bottom:8px">Add New Group</div>
-        <div style="display:flex;gap:8px">
-          <input class="settings-input" style="flex:1" placeholder="e.g. 🏋️ Exercise" id="new-group-label">
-          <button class="btn-gold" onclick="addGroup()">Create</button>
-        </div>
-      </div>`;
+    content=`<h2 class="page-title">Standard Task Groups</h2><p style="font-size:12px;color:#8a7560;margin-bottom:20px">Manage your recurring tasks by group. Changes apply to new days.</p>${groupsHtml}<div class="card" style="border:1px dashed #c9a84c;padding:12px 14px;margin-top:6px"><div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8a7560;margin-bottom:8px">Add New Group</div><div style="display:flex;gap:8px"><input class="settings-input" style="flex:1" placeholder="e.g. 🏋️ Exercise" id="new-group-label"><button class="btn-gold" onclick="addGroup()">Create</button></div></div>`;
   }
 
-  app.innerHTML=`
+  document.getElementById("app").innerHTML=`
     <header>
       <div>
         <div class="brand">✦ Daily Journal</div>
@@ -479,27 +500,23 @@ function render() {
     <main>${content}</main>`;
 }
 
-// ── Global handlers ───────────────────────────────────────────────────────
-function escHtml(s) { return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
-function setView(v) { setState({view:v, historyDate:null}); }
-function toggleGroup(id) { const eg={...state.expandedGroups}; eg[id]=eg[id]===false?undefined:false; setState({expandedGroups:eg}); }
-function updateSettingsTask(gIdx,tIdx,val) { const tg=[...state.taskGroups]; tg[gIdx]={...tg[gIdx],tasks:tg[gIdx].tasks.map((t,i)=>i===tIdx?val:t)}; setState({taskGroups:tg}); scheduleSave(); }
-function removeSettingsTask(gIdx,tIdx) { const tg=[...state.taskGroups]; tg[gIdx]={...tg[gIdx],tasks:tg[gIdx].tasks.filter((_,i)=>i!==tIdx)}; setState({taskGroups:tg}); scheduleSave(); }
-function addSettingsTask(gIdx) { const inp=document.getElementById(`new-task-${state.taskGroups[gIdx].id}`); if(!inp||!inp.value.trim())return; const tg=[...state.taskGroups]; tg[gIdx]={...tg[gIdx],tasks:[...tg[gIdx].tasks,inp.value.trim()]}; setState({taskGroups:tg}); scheduleSave(); }
-function deleteGroup(gIdx) { if(!confirm(`Delete "${state.taskGroups[gIdx].label}"?`))return; const tg=state.taskGroups.filter((_,i)=>i!==gIdx); setState({taskGroups:tg}); scheduleSave(); }
-function addGroup() { const inp=document.getElementById("new-group-label"); if(!inp||!inp.value.trim())return; const tg=[...state.taskGroups,{id:"group-"+Date.now(),label:inp.value.trim(),tasks:[]}]; setState({taskGroups:tg}); scheduleSave(); }
-function retryLoad() { setState({syncStatus:"loading"}); init(); }
+function isExpandableOther(groupId, taskLabel) {
+  return (EXPANDABLE_OTHER_GROUPS.includes(groupId) && taskLabel==="Other") ||
+    (groupId==="business" && ["NS&BC+","Crypto Cards","CryptEd"].includes(taskLabel));
+}
 
-// ── Init ──────────────────────────────────────────────────────────────────
+// ── Init ───────────────────────────────────────────────────────────────────
 async function init() {
   render();
   try {
     const data = await dbLoad();
     if (data?.taskGroups) state.taskGroups = data.taskGroups;
     if (data?.entries) state.entries = data.entries;
-    setState({ syncStatus:"synced" });
+    state.syncStatus = "synced";
+    render();
   } catch {
-    setState({ syncStatus:"error" });
+    state.syncStatus = "error";
+    render();
   }
 }
 
